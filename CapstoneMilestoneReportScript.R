@@ -11,7 +11,7 @@ if(!file.exists("./data")){
 }
 
 if(!file.exists("./data/final")){
-  unzipFile<-"D:\\Users\\fight\\Documents\\DSCapstone\\Coursera-SwiftKey.zip"
+  unzipFile<-file.path(getwd(),"Coursera-SwiftKey.zip")
   unzip(zipfile=unzipFile)
   ##Moves folder to data folder##
   path1 <- file.path(getwd(),"final")
