@@ -1,0 +1,42 @@
+---
+title: "Data Science Capstone Pitch Slides"
+author: "Jason Gibbs"
+date: "7/2/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Purpose
+
+This Shiny App (https://jasondouglasgibbs.shinyapps.io/NextWordPredictor/) was developed for the Data Science Specialization Capstone Project given on Coursera.
+
+The intent was to take a sample of data from Twitter, blogs, and news files and use it to predict the next text of a phrase.
+
+## Prediction Algorithm
+
+The prediction adheres to the below steps:
+
+1. Download the data set and profanity filter and read them into R.
+
+2. Sample 35,000 entries from the Twitter, blogs, and news files.
+
+3. Create a corpus via the Vcorpus command from the tm package, then convert to a data frame.
+
+4. Clean the samples using the gsub command and tm_map functions. Items such as profanities, special characters, and numbers were removed. 
+
+5. Convert to a quanteda corpus and create a prediction object using the sbo package.
+  
+## sbo Package
+
+The sbo package provides for the training and creation of text prediction models. It uses Stupid Back-Off N-gram models. The package's results were also cross-checked based on the results of the Milestone report's results and they appeared to be accurate.
+
+## Shiny App, Issues, and Closing
+
+The Shiny App utilizes a trained corpus saved to a .rda file. This allows the Shiny App to load the trained corpus and avoid having to rebuild predictions.
+
+One issue I noticed in the course of this project is that it did not appear that all cleaning commands were working as intended, which caused me to use gsub and regular expression commands versus regularly available commands through the tm package.
+
+Thanks for your time and consideration!
