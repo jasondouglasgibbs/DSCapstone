@@ -1,0 +1,15 @@
+---
+title: 
+author: 
+date: 
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Instructions
+
+Enter the phrase that you want to use to predict the next word in the text box to the left.
+
